@@ -1,18 +1,56 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en-US">
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+<head>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+	<!-- *** Below I am using Google to track website visitors *** -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-36822935-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+	  gtag('config', 'UA-36822935-2');
+	</script>
+	<!-- *** End tracking script -->
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+	<meta charset="utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>Royce Yang</title>
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+</head>
+
+<body>
+	<div id="landing-page">
+		<div id="typed"></div>
+		<script>
+			var i = 0;
+			var introduction = 'Hey there! It\'s me.\n         \nThank you for visiting my website!\n';
+
+			function type(){
+				if (introduction.charAt(i) == '\n'){
+					document.getElementById("typed").innerHTML += '<br>';
+				}
+				else if (i < introduction.length){
+					document.getElementById("typed").innerHTML += introduction.charAt(i);
+				}
+				i++;
+				if (i == (introduction.length - 8)){
+					document.getElementById("typed").innerHTML += '<button class="button" onclick=\'window.location.href="econ-resume/resume.html"\'> Economist </button>';
+				}
+				else if (i == introduction.length){
+					document.getElementById("typed").innerHTML += '<button class="button" onclick=\'window.location.href="cs-resume/resume.html"\'> Computer Scientist </button>';
+				}
+				setTimeout(type, 28);
+			}
+			type();
+
+
+		</script>
+
+	</div>
+</body>
+
+
+</html>
