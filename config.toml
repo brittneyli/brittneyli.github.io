@@ -1,0 +1,15 @@
+baseurl = "https://brittneyli.github.io"
+title = "title"
+theme = "strange-case"
+
+[params]
+	colorScheme="scheme-gulfracing"
+	DateFormat = "2 Jan 2006"
+	description = "A Hugo theme built with Bootstrap"
+	sidebarDescription = "Side bar description"
+	sidebarFreeText = "A optional paragraph of free text. Set to blank in config.toml to clear..."
+
+[[menu.main]]
+	name = "Hugo"
+	post = "<span class='glyphicon glyphicon-fire'></span>"
+	url = "http://brittneyli.github.io"
